@@ -24,6 +24,18 @@ node server.js
 
 Set environment variables from `.env.example` (JWT secrets, `CORS_ORIGIN`, `BOOTSTRAP_ADMIN_*`, etc.).
 
+**Important:** Do **not** set `DATABASE_URL` on Render unless you attached a real Render Postgres instance. A placeholder URL makes the app exit on startup. Without `DATABASE_URL`, the app uses SQLite automatically.
+
+| Variable | Required on Render |
+|----------|-------------------|
+| `JWT_SECRET` | Yes (long random string) |
+| `SESSION_SECRET` | Yes |
+| `CORS_ORIGIN` | Your Netlify URL |
+| `BOOTSTRAP_ADMIN_NAME` | `Luhun` |
+| `BOOTSTRAP_ADMIN_PASSWORD` | Your admin password |
+| `DATABASE_URL` | Only if you use Render Postgres |
+| `STORE_AUTO_SYNC` | `false` (catalog JSON is not in this repo) |
+
 ## Netlify storefront
 
 Point the static site at your Render URL:

@@ -236,7 +236,8 @@ function banner() {
   console.log(line(`  Health        ${APP_URL}/health`));
   console.log(line(''));
   console.log(line(`  Env           ${process.env.NODE_ENV || 'development'}`));
-  console.log(line(`  Database      ${process.env.NODE_ENV === 'production' && process.env.DATABASE_URL ? 'PostgreSQL' : 'SQLite'}`));
+  const dbLabel = models.sequelize.getDialect() === 'postgres' ? 'PostgreSQL' : 'SQLite';
+  console.log(line(`  Database      ${dbLabel}`));
   console.log(end);
   console.log('');
 }
@@ -251,25 +252,31 @@ function banner() {
     await bootstrapAdmin();
 
     if (process.env.STORE_AUTO_SYNC === 'true') {
+      const catalogDir = process.env.LUHUN_CATALOG_DIR
+        || path.join(__dirname, '..', 'luhun-official', 'js');
+      const hasCatalog = fs.existsSync(path.join(catalogDir, 'shoes-catalog.json'))
+        && fs.existsSync(path.join(catalogDir, 'clothing-catalog.json'));
       const count = await models.Product.count();
-      if (count === 0) {
+      if (count === 0 && hasCatalog) {
         logger.info('[sync] empty catalog — importing Luhun products...');
         try {
           const { spawnSync } = require('child_process');
           const r = spawnSync(process.execPath, ['scripts/sync-luhun-catalog.mjs'], {
             cwd: process.cwd(),
             stdio: 'inherit',
-            env: process.env,
+            env: { ...process.env, LUHUN_CATALOG_DIR: catalogDir },
           });
           if (r.status !== 0) logger.warn('[sync] catalog import exited with code ' + r.status);
           else logger.info('[sync] catalog import complete (' + (await models.Product.count()) + ' products)');
         } catch (e) {
           logger.warn('[sync] auto-import skipped: ' + e.message);
         }
+      } else if (count === 0 && !hasCatalog) {
+        logger.warn('[sync] skipped — catalog JSON not on server (run npm run sync:luhun locally or add products in admin)');
       }
     }
 
-    server.listen(PORT, () => {
+    server.listen(PORT, '0.0.0.0', () => {
       banner();
       logger.info(`Ready on port ${PORT}`);
     });

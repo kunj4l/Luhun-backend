@@ -7,8 +7,17 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
-const sharp = require('sharp');
 const slugify = require('slugify');
+
+function getSharp() {
+  try {
+    return require('sharp');
+  } catch (e) {
+    const err = new Error('Image uploads need the sharp package (rebuild failed on this host).');
+    err.status = 503;
+    throw err;
+  }
+}
 const rateLimit = require('express-rate-limit');
 const { v4: uuidv4 } = require('uuid');
 
@@ -1269,7 +1278,7 @@ async function processImages(files) {
   for (const file of files) {
     const filename = `${Date.now()}-${uuidv4().slice(0, 8)}.webp`;
     const fullPath = path.join(UPLOAD_DIR, filename);
-    await sharp(file.buffer).resize(1600, 1600, { fit: 'inside', withoutEnlargement: true }).webp({ quality: 82 }).toFile(fullPath);
+    await getSharp()(file.buffer).resize(1600, 1600, { fit: 'inside', withoutEnlargement: true }).webp({ quality: 82 }).toFile(fullPath);
     urls.push(`/api/uploads/${filename}`);
   }
   return urls;

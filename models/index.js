@@ -3,23 +3,50 @@
 const path = require('path');
 const { Sequelize, DataTypes, Op } = require('sequelize');
 
-const isProd = process.env.NODE_ENV === 'production';
+/** Ignore .env.example placeholders — they crash Render when NODE_ENV=production. */
+function isUsablePostgresUrl(url) {
+  if (!url || typeof url !== 'string') return false;
+  const u = url.trim();
+  if (!/^postgres(ql)?:\/\//i.test(u)) return false;
+  if (/localhost|127\.0\.0\.1/i.test(u)) return false;
+  if (/user:password@/i.test(u)) return false;
+  return true;
+}
 
-const sequelize = isProd && process.env.DATABASE_URL
-  ? new Sequelize(process.env.DATABASE_URL, {
+function sqliteStoragePath() {
+  if (process.env.SQLITE_PATH) return process.env.SQLITE_PATH;
+  // Render: explicit path or project dir (both are ephemeral on free tier).
+  if (process.env.RENDER === 'true') {
+    return path.join(process.cwd(), 'data.sqlite');
+  }
+  return path.join(process.cwd(), 'data.sqlite');
+}
+
+function buildSequelize() {
+  const url = process.env.DATABASE_URL;
+  if (isUsablePostgresUrl(url)) {
+    const needsSsl = process.env.DATABASE_SSL === 'true'
+      || /\.render\.com|amazonaws\.com|rds\./i.test(url);
+    return new Sequelize(url, {
       dialect: 'postgres',
       logging: process.env.DB_LOGGING === 'true' ? console.log : false,
       pool: {
         max: Number(process.env.DB_POOL_MAX || 20),
         min: Number(process.env.DB_POOL_MIN || 0),
       },
-      dialectOptions: { ssl: { require: false, rejectUnauthorized: false } },
-    })
-  : new Sequelize({
-      dialect: 'sqlite',
-      storage: process.env.SQLITE_PATH || path.join(process.cwd(), 'data.sqlite'),
-      logging: process.env.DB_LOGGING === 'true' ? console.log : false,
+      dialectOptions: needsSsl
+        ? { ssl: { require: true, rejectUnauthorized: false } }
+        : {},
     });
+  }
+  return new Sequelize({
+    dialect: 'sqlite',
+    storage: sqliteStoragePath(),
+    logging: process.env.DB_LOGGING === 'true' ? console.log : false,
+  });
+}
+
+const sequelize = buildSequelize();
 
 const baseOpts = { timestamps: true, paranoid: true };
 
