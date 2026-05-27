@@ -1,0 +1,23 @@
+# Dependencies (Render installs these — never upload)
+node_modules/
+node_modules - Copy/
+
+# Accidental Windows " - Copy" duplicates
+* - Copy*
+* - Copy.*
+
+# Database & secrets
+.env
+.env.*
+!.env.example
+data.sqlite
+data*.sqlite
+
+# Uploads (runtime files)
+uploads/*
+!uploads/.gitkeep
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
