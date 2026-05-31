@@ -22,6 +22,7 @@ const models = require('./models');
 const { buildRouter } = require('./routes');
 const services = require('./services');
 const adminDashboard = require('./admin-dashboard');
+const { importCatalogIfEmpty, catalogDir } = require('./scripts/import-catalog.cjs');
 
 const logger = winston.createLogger({
   level: process.env.LOG_LEVEL || 'info',
@@ -256,30 +257,21 @@ function banner() {
     logger.info('[db] synced');
     await bootstrapAdmin();
 
-    if (process.env.STORE_AUTO_SYNC !== 'false') {
-      const catalogDir = process.env.LUHUN_CATALOG_DIR
-        || path.join(__dirname, 'catalog')
-        || path.join(__dirname, '..', 'luhun-official', 'js');
-      const hasCatalog = fs.existsSync(path.join(catalogDir, 'shoes-catalog.json'))
-        && fs.existsSync(path.join(catalogDir, 'clothing-catalog.json'));
-      const count = await models.Product.count();
-      if (count === 0 && hasCatalog) {
-        logger.info('[sync] empty catalog — importing Luhun products...');
-        try {
-          const { spawnSync } = require('child_process');
-          const r = spawnSync(process.execPath, ['scripts/sync-luhun-catalog.mjs'], {
-            cwd: process.cwd(),
-            stdio: 'inherit',
-            env: { ...process.env, LUHUN_CATALOG_DIR: catalogDir },
-          });
-          if (r.status !== 0) logger.warn('[sync] catalog import exited with code ' + r.status);
-          else logger.info('[sync] catalog import complete (' + (await models.Product.count()) + ' products)');
-        } catch (e) {
-          logger.warn('[sync] auto-import skipped: ' + e.message);
-        }
-      } else if (count === 0 && !hasCatalog) {
-        logger.warn('[sync] skipped — catalog JSON not on server (run npm run sync:luhun locally or add products in admin)');
+    const dir = catalogDir();
+    const countBefore = await models.Product.count();
+    logger.info(`[sync] checking catalog — products=${countBefore} dir=${dir}`);
+    try {
+      const result = await importCatalogIfEmpty();
+      if (result.skipped === 'missing_files') {
+        logger.warn(`[sync] catalog JSON missing — shoes: ${result.shoesPath}`);
+      } else if (result.skipped === 'already_has_products') {
+        logger.info(`[sync] skipped — ${result.total} products already in CRM`);
+      } else {
+        logger.info(`[sync] imported ${result.imported} products (${result.total} total)`);
       }
+    } catch (e) {
+      logger.error('[sync] import failed: ' + e.message);
+      console.error(e.stack);
     }
 
     server.listen(PORT, '0.0.0.0', () => {
