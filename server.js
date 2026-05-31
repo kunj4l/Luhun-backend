@@ -32,7 +32,9 @@ const logger = winston.createLogger({
 });
 
 const PORT = Number(process.env.PORT || 4000);
-const APP_URL = process.env.APP_URL || `http://localhost:${PORT}`;
+const APP_URL = process.env.APP_URL
+  || process.env.RENDER_EXTERNAL_URL
+  || `http://localhost:${PORT}`;
 const APP_NAME = process.env.APP_NAME || "Luhun's Official";
 
 const app = express();
@@ -46,7 +48,10 @@ const io = new SocketIOServer(server, {
 // ---------------------------------------------------------------------------
 app.set('trust proxy', 1);
 app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
-const corsOrigins = (process.env.CORS_ORIGIN || '*').split(',').map((s) => s.trim()).filter(Boolean);
+const corsOrigins = (process.env.CORS_ORIGIN || 'https://luhun.netlify.app')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' && corsOrigins[0] !== '*'
     ? corsOrigins
@@ -251,8 +256,9 @@ function banner() {
     logger.info('[db] synced');
     await bootstrapAdmin();
 
-    if (process.env.STORE_AUTO_SYNC === 'true') {
+    if (process.env.STORE_AUTO_SYNC !== 'false') {
       const catalogDir = process.env.LUHUN_CATALOG_DIR
+        || path.join(__dirname, 'catalog')
         || path.join(__dirname, '..', 'luhun-official', 'js');
       const hasCatalog = fs.existsSync(path.join(catalogDir, 'shoes-catalog.json'))
         && fs.existsSync(path.join(catalogDir, 'clothing-catalog.json'));

@@ -13,7 +13,7 @@ dotenv.config({ path: path.join(process.cwd(), '.env') });
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const catalogDir = process.env.LUHUN_CATALOG_DIR
-  || path.join(__dirname, '..', '..', 'luhun-official', 'js');
+  || path.join(__dirname, '..', 'catalog');
 
 const shoesPath = path.join(catalogDir, 'shoes-catalog.json');
 const clothingPath = path.join(catalogDir, 'clothing-catalog.json');

@@ -1,0 +1,517 @@
+[
+  {
+    "id": "nike-pro-hyperwarm-hood",
+    "name": "Nike Pro Hyperwarm Hood",
+    "category": "clothing",
+    "clothingType": "hoodies",
+    "sizes": [
+      "Black"
+    ],
+    "price": 40,
+    "compareAt": 50,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitled_1_f8bbe3f5-dfa7-4758-ba3d-27b0656ec5c2.png?width=600",
+    "handle": "nike-pro-hyperwarm-hood"
+  },
+  {
+    "id": "better-days-ahead-t-shirt",
+    "name": "Better Days Ahead T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 25,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Myproject_2.png?width=600",
+    "handle": "better-days-ahead-t-shirt"
+  },
+  {
+    "id": "cash-rules-everything-t-shirt",
+    "name": "Cash Rules Everything T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 25,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/NewProject_3.png?width=600",
+    "handle": "cash-rules-everything-t-shirt"
+  },
+  {
+    "id": "errday-hustler-blue-t-shirt",
+    "name": "Errday Hustler Blue T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 25,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/NewProject_16.png?width=600",
+    "handle": "errday-hustler-blue-t-shirt"
+  },
+  {
+    "id": "errday-hustler-dollor-blind-t-shirt",
+    "name": "Errday Hustler Dollor Blind T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS / Yellow",
+      "XS / Red",
+      "S / Yellow",
+      "S / Red",
+      "M / Yellow",
+      "M / Red",
+      "L / Yellow",
+      "L / Red",
+      "XL / Yellow",
+      "XL / Red",
+      "XX / Yellow",
+      "XX / Red"
+    ],
+    "price": 25,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/NewProject_7.png?width=600",
+    "handle": "errday-hustler-dollor-blind-t-shirt"
+  },
+  {
+    "id": "fall-9-times-get-up-10-t-shirt",
+    "name": "Fall 9 Times Get Up 10 T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 25,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/NewProject_4.png?width=600",
+    "handle": "fall-9-times-get-up-10-t-shirt"
+  },
+  {
+    "id": "gg-fam-snapback-trucker-cap",
+    "name": "GG Fam Snapback Trucker Cap",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "Black",
+      "Navy",
+      "Red/Black",
+      "Black/White"
+    ],
+    "price": 25,
+    "compareAt": 35,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Myproject_8_f11295e4-1491-460f-9c6b-e55c1736dbbf.png?width=600",
+    "handle": "gg-fam-snapback-trucker-cap"
+  },
+  {
+    "id": "copy-of-better-days-ahead-t-shirt",
+    "name": "HOOD MA GG Fam T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 29.99,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/mens-fitted-t-shirt-black-front-64e56e54bb297.jpg?width=600",
+    "handle": "copy-of-better-days-ahead-t-shirt"
+  },
+  {
+    "id": "hustle-hard-t-shirt",
+    "name": "Hustle Hard  T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS / White",
+      "XS / Black",
+      "XS / Red",
+      "S / White",
+      "S / Black",
+      "S / Red",
+      "M / White",
+      "M / Black",
+      "M / Red",
+      "L / White",
+      "L / Black",
+      "L / Red",
+      "XL / White",
+      "XL / Black",
+      "XL / Red",
+      "2XL / White",
+      "2XL / Black",
+      "2XL / Red"
+    ],
+    "price": 25,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/NewProject_9_24149608-87de-4f14-90cd-7260c106fa11.png?width=600",
+    "handle": "hustle-hard-t-shirt"
+  },
+  {
+    "id": "luhun-angel",
+    "name": "Luhun Angel T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS / Black/White",
+      "S / Black/White",
+      "M / Black/White",
+      "L / Black/White",
+      "XL / Black/White",
+      "XXL / Black/White"
+    ],
+    "price": 25,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Myproject_3.png?width=600",
+    "handle": "luhun-angel"
+  },
+  {
+    "id": "luhun-x-site-collab-shorts",
+    "name": "LUHUN X SITE COLLAB SHORTS",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "S / BLUE",
+      "S / RED",
+      "M / BLUE",
+      "M / RED",
+      "L / BLUE",
+      "L / RED",
+      "XL / BLUE",
+      "XL / RED"
+    ],
+    "price": 35,
+    "compareAt": 45,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitled_10_ee55d9f6-c9a4-4168-a554-77a8adc86ce4.png?width=600",
+    "handle": "luhun-x-site-collab-shorts"
+  },
+  {
+    "id": "luhun-x-site-collab-tee",
+    "name": "LUHUN X SITE COLLAB TEE",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS / TOP",
+      "XS / SINS",
+      "S / TOP",
+      "S / SINS",
+      "M / TOP",
+      "M / SINS",
+      "L / TOP",
+      "L / SINS"
+    ],
+    "price": 35,
+    "compareAt": 45,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitled_5_a0aeaa65-a697-49a6-98e5-54ad12ad77a8.png?width=600",
+    "handle": "luhun-x-site-collab-tee"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-amry",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT AMRY",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitleddesign_5.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-amry"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-charcoal",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT CHARCOAL",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitleddesign_10.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-charcoal"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-amry-copy",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT CORAL",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitled_design_8_10faed72-bd39-4f9c-9583-e35a31d56ffb.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-amry-copy"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-light-blue",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT LIGHT BLUE",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitleddesign_19_fb068ccd-586e-4ac5-a372-1d7a1110b786.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-light-blue"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-neon-blue",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT NEON BLUE",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitled_design_3.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-neon-blue"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-neon-green",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT NEON GREEN",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitled_design_2.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-neon-green"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-neon-orange",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT NEON ORANGE",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitled_design_2_1e9fc697-0789-4f1a-8e76-808d69756424.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-neon-orange"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-neon-pink",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT NEON PINK",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitled_design_1_83afd022-eb74-49d7-a1ea-f0ed64a2aee5.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-neon-pink"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-spectra-yellow-copy",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT OFF-WHITE",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitleddesign_16_317df8e5-07e7-4133-8663-f975e143de21.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-spectra-yellow-copy"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-1",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT SPECTRA YELLOW",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitleddesign_14.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-1"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT TOMATO",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitleddesign_16.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt"
+  },
+  {
+    "id": "nep-x-luhun-history-made-unisex-t-shirt-copy",
+    "name": "NEP X LUHUN \"HISTORY MADE\" UNISEX T-SHIRT VINTAGE BLACK",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 35,
+    "compareAt": null,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/Untitleddesign_19.png?width=600",
+    "handle": "nep-x-luhun-history-made-unisex-t-shirt-copy"
+  },
+  {
+    "id": "today-is-a-gift-panda-t-shirt",
+    "name": "Today Is A Gift Panda T-Shirt",
+    "category": "clothing",
+    "clothingType": "tees",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "price": 25,
+    "compareAt": 34.99,
+    "soldOut": false,
+    "badge": "sale",
+    "image": "https://cdn.shopify.com/s/files/1/0837/7427/5897/files/NewProject_6_d271de6e-4aa3-4a1d-86b9-501409943b8f.png?width=600",
+    "handle": "today-is-a-gift-panda-t-shirt"
+  }
+]

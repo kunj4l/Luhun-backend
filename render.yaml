@@ -8,8 +8,10 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: STORE_AUTO_SYNC
-        value: "false"
+      - key: CORS_ORIGIN
+        value: https://luhun.netlify.app
+      - key: LUHUN_CATALOG_DIR
+        value: ./catalog
       - key: JWT_SECRET
         generateValue: true
       - key: SESSION_SECRET
