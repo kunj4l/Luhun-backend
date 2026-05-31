@@ -53,10 +53,25 @@ const corsOrigins = (process.env.CORS_ORIGIN || 'https://luhun.netlify.app')
   .split(',')
   .map((s) => s.trim())
   .filter(Boolean);
+
+function isAllowedCorsOrigin(origin) {
+  if (!origin) return true;
+  if (corsOrigins[0] === '*') return true;
+  if (corsOrigins.includes(origin)) return true;
+  try {
+    const host = new URL(origin).hostname;
+    if (host.endsWith('.netlify.app')) return true;
+  } catch { /* ignore */ }
+  return false;
+}
+
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' && corsOrigins[0] !== '*'
-    ? corsOrigins
-    : true,
+  origin(origin, callback) {
+    if (process.env.NODE_ENV !== 'production') return callback(null, true);
+    if (isAllowedCorsOrigin(origin)) return callback(null, true);
+    logger.warn(`[cors] blocked origin: ${origin}`);
+    return callback(null, false);
+  },
   credentials: true,
 }));
 app.use(compression());
